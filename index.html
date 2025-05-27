@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burguer House</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pag2.css">
+  <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+</head>
+
+<body> <!--Grid-->
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-lg-8">
+        <h1 class="logo text-danger"><i class="fa-solid fa-burger"></i> Burger House</h1>
+      </div>
+      <div class="col-lg-4">
+        <a href="#" class="btn btn-danger"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="btn btn-primary"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="btn btn-success"><i class="fa-brands fa-whatsapp"></i></a>
+          <!--  Offcanvas -->
+          <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrinho" aria-controls="carrinho">
+            <i class="fa-solid fa-cart-shopping"></i> Carrinho
+          </button>
+          <!--Bagde-->
+          <button class="btn btn-primary position-relative" 
+            type="button" 
+             data-bs-toggle="offcanvas" 
+             data-bs-target="#painelNovidades" 
+             aria-controls="painelNovidades">
+            Novidades
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+          <!--barra da lateral do carrinho-->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinho" aria-labelledby="carrinhoLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="carrinhoLabel">Seu Carrinho</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>Nenhum item adicionado.</p>
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="painelNovidades" aria-labelledby="tituloNovidades">
+            <div class="offcanvas-header">
+              <h5 id="tituloNovidades" class="offcanvas-title">Novidades</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>Na compra de qualquer combo, ganhe 10% de cashback no próximo pedido. <br> <br> Valido até 15/07/25
+              </p>
+              
+            </div>
+          </div>
+        <form>
+          <!-- INPUT GROUP-->
+          <div class="input-group mt-3">
+            <input type="text" name="pesquisar" placeholder="Pesquisar..." class="form-control">
+            <button class="btn btn-dark">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+      <!--Navbar-->
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-lg bg-dark " data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="fa fa-house"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Combos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Delivery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
+                <!--dropdown-->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categorias</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Clássicos</a></li>
+                    <li><a class="dropdown-item" href="#">Artesanais</a></li>
+                    <li><a class="dropdown-item" href="#">Veganos</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row my-3"> 
+      <div class="col-lg-8"> <!-- carrossel -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!-- imagens responsivas-->
+              <img src="imagens/4.jpg.jpg" class="img-fluid" alt="..."> <!-- imagens responsivas-->
+            </div>
+            <div class="carousel-item">
+              <img src="imagens/5.jpg.jpg" class="img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="imagens/6.jpg.jpg" class="img-fluid" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4"> <!--accordion-->
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Quais são os horários de funcionamento?
+              </button>
+            </h2>
+            <!--Shadows-->
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="shadow p-3 mb-5 bg-body-tertiary rounded">Funcionamos de <strong>segunda a sábado, das 11h às 23h</strong>. Aos domingos e feriados, abrimos das 16h às 22h.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Os hambúrgueres acompanham batata e bebida?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                Os hambúrgueres vendidos individualmente <strong>não incluem acompanhamento</strong>. Mas temos combos com batata frita e refrigerante a preços promocionais!
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Como funciona o delivery?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                Nosso delivery funciona via aplicativos parceiros ou pelo WhatsApp. Entregamos em até <strong>40 minutos</strong> na região central. Consulte o CEP para verificar a disponibilidade.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5" id="cardapio">
+      <div class="col-12">
+       <h2 class="text-center">Cardápio</h2>
+      </div>
+    </div>   
+
+    <!-- Cards -->
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <img src="imagens/4.jpg.jpg" class="card-img-top" alt="X-Bacon Artesanal">
+          <div class="card-body">
+            <h5 class="card-title text-success">X-Bacon Artesanal</h5>
+             <p class="text-muted fw-bold ">R$ 28,90</p>
+            <p class="card-text">Pão brioche, 2 carnes, queijo cheddar, bacon crocante, molho especial.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalXbacon">Detalhes</button>
+            <button class="btn btn-outline-secondary">
+              <i class="fa fa-cart-plus"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+          
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <img src="imagens/5.jpg.jpg" class="card-img-top" alt="Smash Duplo BBQ">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Smash Duplo BBQ</h5>
+            <p class="text-muted fw-bold ">R$ 32,90</p>
+            <p class="card-text">Duas carnes smash, cheddar, cebola caramelizada, bacon crocante e molho barbecue no pão brioche.</p>
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalSmash">Detalhes</button>
+             <button class="btn btn-outline-secondary">
+              <i class="fa fa-cart-plus"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <img src="imagens/6.jpg.jpg" class="card-img-top" alt="X-Tudo Supremo">
+          <div class="card-body">
+            <h5 class="card-title text-danger">X-Tudo Supremo</h5>
+            <p class="text-muted fw-bold ">R$ 34,90</p>
+            <p class="card-text">Carne 180g, queijo prato, presunto, bacon, ovo, alface, tomate, batata palha e maionese especial.</p>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalXtudo">Detalhes</button>
+             <button class="btn btn-outline-secondary">
+              <i class="fa fa-cart-plus"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modais dos Cards -->
+    <div class="modal fade" id="modalXbacon" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">X-Bacon Artesanal</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">Delicioso hambúrguer artesanal com bacon crocante e molho especial.
+             <img src="imagens/4.jpg.jpg" class="img-fluid rounded" alt="X-Bacon Artesanal">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalSmash" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Smash Duplo BBQ</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">Cheio de sabor, com duas carnes smash e molho barbecue no brioche.
+             <img src="imagens/5.jpg.jpg" class="img-fluid rounded" alt="X-Bacon Artesanal">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalXtudo" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">X-Tudo Supremo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">Uma verdadeira refeição com tudo o que você ama em um só lanche!
+             <img src="imagens/4.jpg.jpg" class="img-fluid rounded" alt="X-Bacon Artesanal">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCALIZAÇÃO -->
+    <div class="row my-5" id="localizacao">
+      <div class="col-12">
+        <h2 class="text-center">Nosso Endereço</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245662.38823793846!2d-48.322221305468766!3d-15.831622699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bcdac075bb555%3A0xad2b2370a2b835a!2sBurger%20House!5e0!3m2!1spt-BR!2sbr!4v1747761568156!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <!-- galeria -->
+        <h3 class="mt-5 mb-4 text-center">Veja nosso espaço</h3>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img src="imagens/r1.jpg" class="img-fluid rounded shadow img-hover-zoom" alt="Foto do ambiente 1">
+          </div>
+          <div class="col-md-4">
+            <img src="imagens/r2.jpg" class="img-fluid rounded shadow img-hover-zoom" alt="Foto do ambiente 1">
+          </div>
+          <div class="col-md-4">
+            <img src="imagens/r3.jpg" class="img-fluid rounded shadow img-hover-zoom" alt="Foto do ambiente 1">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--estrelas de avaliação-->
+    <form>
+      <label class="form-label">Avalie nosso serviço:</label>
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5" title="5 estrelas"><i class="fa fa-star"></i></label>
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4" title="4 estrelas"><i class="fa fa-star"></i></label>
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3" title="3 estrelas"><i class="fa fa-star"></i></label>
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2" title="2 estrelas"><i class="fa fa-star"></i></label>
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label for="star1" title="1 estrela"><i class="fa fa-star"></i></label>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Enviar Avaliação</button>
+    </form>
+    <!--adicionar comentário-->
+      <div class="mb-3">
+        <label for="comentarioCliente" class="form-label fw-semibold">Deixe seu comentário:</label>
+        <textarea class="form-control" id="comentarioCliente" rows="3" placeholder="Escreva aqui sua opinião..."></textarea>
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-paper-plane"></i> Enviar comentário
+        </button>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-1 mt-5">
+      <p class="mb-0">© 2025 Burger House. Desenvolvido por <strong>Samuel Lopes</strong></p>
+    </footer>
+      
+
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
